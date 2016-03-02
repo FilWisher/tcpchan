@@ -3,7 +3,6 @@ package tcpchan
 import (
   "testing"
   "net"
-  "fmt"
 
   "github.com/filwisher/tcptest"
 )
@@ -19,7 +18,6 @@ func TestStartServer(t *testing.T) {
   tcptest.NewServer(":8080", func (conn net.Conn) {
     for {
       n, err := conn.Read(buffer)
-      fmt.Println("Got ser: ", string(buffer[:n]))
       if err != nil {
         panic("Test server failed")
       }

@@ -1,29 +1,9 @@
-/*
-
 // also need TCPChan server
-
-// similar API to TCPConn setup
-
-func (c *TCPChan) Connect {
-...
-}
-
-// communication with byte arrays which higher abstraction
-// can then encode/decode from/onto
-
-// HTTP wrapper?
-
-*/
-
-/*
-  TODO: Also try implementing RPC nameserver (service discovery) proto
-*/
 
 package tcpchan
 
 import (
   "net"
-  _ "fmt"
 )
 
 type TCPChan struct {

@@ -42,6 +42,7 @@ func (ch *TCPChan) checkIncoming() {
     n, err := ch.Conn.Read(buffer)
     if err != nil {
       ch.Err <- err
+      continue
     }
     ch.In <- buffer[:n]
   }
